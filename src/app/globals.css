@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body {
+  display: grid;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #e5e5e5;
+  user-select: none;
+  place-content: center;
+}
+
+.main__container {
+  width: 320px;
+  height: 640px;
+  display: flex;
+  position: relative;
+  background: url(/images/iphone.webp) no-repeat;
+  background-size: contain;
+}
+
+.section__container {
+  gap: 24px;
+  width: 100%;
+  margin: 24px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 6px;
+  border-radius: 32px;
+  flex-direction: column;
+}
+
+.menu__list {
+  @apply flex items-center flex-col gap-2 text-white cursor-pointer;
+}
