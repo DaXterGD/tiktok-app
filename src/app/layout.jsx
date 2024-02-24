@@ -14,14 +14,16 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <main className='main__container'>
-          <section className='section__container'>
-            <Header />
-            <div className='absolute bg-[#e5e5e5] inset-0 -z-10' />
-            {children}
-            <Footer />
-          </section>
-        </main>
+        <div className='filter_shadow'>
+          <main className='main__container'>
+            <section className='section__container'>
+              <div className='absolute bg-white inset-0 -z-10' />
+              <Header />
+              {children}
+              <Footer />
+            </section>
+          </main>
+        </div>
       </body>
     </html>
   )
