@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Home, Friends, Upload, Inbox, Profile } from './Icons'
+import { Home, Friends, Upload, Inbox, Profile } from './Svg'
 
 export default function Footer () {
   return (
