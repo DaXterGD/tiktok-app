@@ -19,7 +19,9 @@ export default function RootLayout ({ children }) {
             <section className='section__container'>
               <div className='absolute bg-white inset-0 -z-10' />
               <Header />
-              {children}
+              <div className='relative w-full h-full my-0 mx-auto'>
+                {children}
+              </div>
               <Footer />
             </section>
           </main>
