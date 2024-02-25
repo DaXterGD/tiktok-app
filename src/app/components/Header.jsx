@@ -13,7 +13,6 @@ export default function Header () {
             height={24}
           />
         </Link>
-
       </header>
     </>
   )
