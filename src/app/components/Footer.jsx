@@ -5,7 +5,7 @@ import { Home, Friends, Upload, Inbox, Profile } from './Svg'
 export default function Footer () {
   return (
     <>
-      <div className='sticky -bottom-5 left-0 bg-white w-full py-2 px-3 mt-1 text-xs'>
+      <div className='sticky -bottom-4 left-0 bg-white w-full py-2 px-3 mt-1 text-xs'>
         <div className='flex justify-between items-center'>
           <Link href='/'>
             <div className='flex flex-col items-center'>
@@ -21,7 +21,7 @@ export default function Footer () {
           </Link>
           <Link href='/upload'>
             <div className='flex flex-col items-center'>
-              <div className='w-[75px] flex items-center justify-center my-0 mx-auto top-2/4 left-2/4'>
+              <div className='w-[fit-content] flex items-center justify-center my-0 mx-auto top-2/4 left-2/4'>
                 <Upload />
               </div>
             </div>
