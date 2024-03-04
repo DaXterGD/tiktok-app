@@ -1,9 +1,11 @@
-import VideoPlayer from './components/VideoPlayer'
+import FeedVideos from './components/FeedVideos'
 
 export default function Home () {
   return (
     <>
-      <VideoPlayer />
+      <div className='container__scroll'>
+        <FeedVideos />
+      </div>
     </>
   )
 }
