@@ -66,15 +66,8 @@ body {
   @apply flex items-center flex-col gap-2 text-white cursor-pointer;
 }
 
-.main__section {
-  display: block;
+.main__content {
+  height: auto;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-.container__scroll {
-  overflow-y: scroll;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(3rem);
   scroll-snap-type: y mandatory;
 }
