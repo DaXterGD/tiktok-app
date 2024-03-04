@@ -2,17 +2,43 @@
 @tailwind utilities;
 @tailwind components;
 
+@font-face {
+  font-family: 'TikTokFont';
+  src: url(/fonts/TikTokFont-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TikTokFont';
+  src: url(/fonts/TikTokFont-Regular.woff2) format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TikTokFont';
+  src: url(/fonts/TikTokFont-Semibold.woff2) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body, html {
+  height: 100vh;
+  width: 100%;
+  font-family: 'TikTokFont', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
 body {
   display: grid;
   overflow: hidden;
   min-height: 100vh;
-  background: #e5e5e5;
-  user-select: none;
   place-content: center;
-}
-
-.filter_shadow {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 }
 
 .main__container {
@@ -20,7 +46,7 @@ body {
   height: 640px;
   display: flex;
   position: relative;
-  background: url(/images/iphone.webp) no-repeat;
+  background: url(/images/iphone.png) no-repeat;
   background-size: contain;
 }
 
@@ -38,4 +64,17 @@ body {
 
 .menu__list {
   @apply flex items-center flex-col gap-2 text-white cursor-pointer;
+}
+
+.main__section {
+  display: block;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.container__scroll {
+  overflow-y: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(3rem);
+  scroll-snap-type: y mandatory;
 }
