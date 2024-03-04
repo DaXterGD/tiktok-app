@@ -14,18 +14,17 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='filter_shadow'>
-          <main className='main__container'>
-            <section className='section__container'>
-              <div className='absolute bg-white inset-0 -z-10' />
-              <Header />
-              <div className='relative w-full h-full my-0 mx-auto'>
+        <main className='main__container'>
+          <section className='section__container'>
+            <Header />
+            <div className='relative w-full h-full my-0 mx-auto'>
+              <div className='h-screen main__section'>
                 {children}
               </div>
-              <Footer />
-            </section>
-          </main>
-        </div>
+            </div>
+            <Footer />
+          </section>
+        </main>
       </body>
     </html>
   )
