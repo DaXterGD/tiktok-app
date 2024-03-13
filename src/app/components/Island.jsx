@@ -1,9 +1,62 @@
 'use client'
 
-import LiveIsland from 'react-live-island'
+import { useState, useEffect } from 'react'
 
-export default function Island () {
+export default function Island ({ loading, completed }) {
+  const [state, setState] = useState('inactive')
+
+  useEffect(() => {
+    if (loading) {
+      setState('loading')
+    } else if (completed) {
+      setState('completed')
+
+      setTimeout(() => {
+        setState('loading')
+
+        setTimeout(() => {
+          setState('inactive')
+        }, 500)
+      }, 2500)
+    } else {
+      setState('inactive')
+    }
+  }, [loading, completed])
+
+  const GetStyle = () => {
+    switch (state) {
+      case 'loading':
+        return {
+          width: '200px',
+          height: '25px',
+          background: 'black',
+          borderRadius: '20px',
+          transition: '.2s ease-in-out'
+        }
+      case 'completed':
+        return {
+          width: '250px',
+          height: '60px',
+          background: 'black',
+          borderRadius: '50px'
+        }
+
+      default:
+        break
+    }
+  }
   return (
-    <LiveIsland>{(isSmall) => (isSmall ? 'small' : 'large')}</LiveIsland>
+    <div
+      className='island'
+      style={GetStyle()}
+    >
+      {state === 'loading' && (
+        <span />
+      )}
+
+      {state === 'completed' && (
+        <span />
+      )}
+    </div>
   )
 }

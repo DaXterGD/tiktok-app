@@ -43,7 +43,7 @@ export default function Upload () {
   }
   return (
     <>
-      <div className='w-full h-full bg-white shadow-lg rounded-md py-4 px-2'>
+      <div className='w-full h-full bg-white shadow-lg rounded py-12 px-2'>
 
         <div>
           <h1 className='text-[18px] font-semibold'>Load video</h1>

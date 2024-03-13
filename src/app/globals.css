@@ -37,7 +37,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #ffffff;
+  background: #000;
 }
 
 .box {
@@ -73,15 +73,4 @@ body {
   background: black;
   transition: .2s ease-in-out;
   border-radius: 20px;
-
-  &:hover {
-    width: 200px;
-    height: 25;
-  }
-
-  &:active {
-    width: 250px;
-    height: 60px;
-    border-radius: 50px;
-  }
 }
