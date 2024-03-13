@@ -17,7 +17,7 @@ export default function Home () {
         setLoading(false)
         setCompleted(true)
       }, 0)
-    }, 6000)
+    }, 1000)
   }
   return (
     <>
@@ -25,6 +25,7 @@ export default function Home () {
       <Island
         loading={loading}
         completed={completed}
+        information='El video se subio'
       />
 
       <button
