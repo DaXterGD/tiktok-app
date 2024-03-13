@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Spin } from './Svg'
 
 export default function Island ({ loading, completed }) {
   const [state, setState] = useState('inactive')
@@ -16,8 +17,8 @@ export default function Island ({ loading, completed }) {
 
         setTimeout(() => {
           setState('inactive')
-        }, 500)
-      }, 2500)
+        }, 0)
+      }, 1000)
     } else {
       setState('inactive')
     }
@@ -29,14 +30,12 @@ export default function Island ({ loading, completed }) {
         return {
           width: '200px',
           height: '25px',
-          background: 'black',
           borderRadius: '20px'
         }
       case 'completed':
         return {
           width: '250px',
           height: '60px',
-          background: 'black',
           borderRadius: '50px'
         }
 
@@ -50,7 +49,20 @@ export default function Island ({ loading, completed }) {
       style={GetStyle()}
     >
       {state === 'loading' && (
-        <span />
+        <div className='flex justify-between'>
+          <div>
+            <img
+              src='../favicon.ico'
+              alt='TikTok Logo'
+              className='rounded-full my-0.5'
+              width={20}
+              height={90}
+            />
+          </div>
+          <div class='flex justify-center items-center'>
+            <Spin />
+          </div>
+        </div>
       )}
 
       {state === 'completed' && (
