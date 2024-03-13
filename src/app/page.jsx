@@ -17,7 +17,7 @@ export default function Home () {
         setLoading(false)
         setCompleted(true)
       }, 0)
-    }, 400)
+    }, 6000)
   }
   return (
     <>
