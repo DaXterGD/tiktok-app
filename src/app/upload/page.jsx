@@ -6,15 +6,10 @@ import { AiOutlineCheckCircle } from 'react-icons/ai'
 import { BiCloudUpload } from 'react-icons/bi'
 
 export default function Upload () {
-//   const router = useRouter()
-
   const [caption, setCaption] = useState('')
   const [fileDisplay, setFileDisplay] = useState('')
 
   const [file, setFile] = useState(null)
-  // const [error, setError] = useState(null)
-
-  // const [isUploading, setIsUploading] = useState(false)
 
   const OnChange = e => {
     const files = e.target.files
@@ -43,7 +38,7 @@ export default function Upload () {
   }
   return (
     <>
-      <div className='w-full h-full bg-white shadow-lg rounded py-12 px-2'>
+      <div className='w-full h-full py-12 px-2.5'>
 
         <div>
           <h1 className='text-[18px] font-semibold'>Load video</h1>
@@ -53,7 +48,9 @@ export default function Upload () {
         <div>
           {!fileDisplay
             ? (
-              <div className='
+              <label
+                htmlFor='fileInput'
+                className='
                     flex
                     flex-row
                     items-center
@@ -91,7 +88,7 @@ export default function Upload () {
                     rounded-sm
                     cursor-pointer
                     leading-3
-                    '
+                  '
                 >
                   Select a file
                 </label>
@@ -102,7 +99,7 @@ export default function Upload () {
                   accept='.mp4'
                   onChange={OnChange}
                 />
-              </div>
+              </label>
               )
             : (
               <div className='mx-auto mt-2 mb-4 w-full h-[500px] p-2 rounded-2xl cursor-pointer relative'>
