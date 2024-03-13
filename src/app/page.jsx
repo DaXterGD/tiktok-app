@@ -16,8 +16,8 @@ export default function Home () {
       setTimeout(() => {
         setLoading(false)
         setCompleted(true)
-      }, 500)
-    }, 1500)
+      }, 0)
+    }, 400)
   }
   return (
     <>
