@@ -30,8 +30,7 @@ export default function Island ({ loading, completed }) {
           width: '200px',
           height: '25px',
           background: 'black',
-          borderRadius: '20px',
-          transition: '.2s ease-in-out'
+          borderRadius: '20px'
         }
       case 'completed':
         return {

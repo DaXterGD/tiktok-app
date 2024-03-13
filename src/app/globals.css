@@ -72,6 +72,6 @@ body {
   height: 25px;
   position: absolute;
   background: black;
-  transition: .2s ease-in-out;
+  transition: all 640ms cubic-bezier(.77, 0, .18, 1);
   border-radius: 20px;
 }
