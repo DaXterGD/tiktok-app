@@ -37,7 +37,7 @@ export default function Island ({ loading, completed, information }) {
         }
       case 'completed':
         return {
-          width: '250px',
+          width: '270px',
           height: '60px',
           borderRadius: '50px'
         }
@@ -69,8 +69,8 @@ export default function Island ({ loading, completed, information }) {
       )}
 
       {state === 'completed' && (
-        <div className='left-0 absolute'>
-          <div className='flex pl-4 items-center justify-start'>
+        <div className='relative'>
+          <div className='flex pl-1 items-center'>
             <div className='flex items-center'>
               <img
                 src='../favicon.ico'
@@ -81,10 +81,10 @@ export default function Island ({ loading, completed, information }) {
               />
               <div className='flex flex-col items-start ml-2'>
                 <span className='text-[#6c6c6c] text-xs font-bold'>TikTok</span>
-                <span className='text-white text-xs mt-[3px] -mb-2'>{information}</span>
+                <span className='text-white text-xs mt-[3px] -mb-2 overflow-hidden overflow-ellipsis'>{information}</span>
               </div>
-              <div className='flex justify-end items-center absolute -right-20 top-3'>
-                <span className='flex justify-center items-center bg-gray-300/20 text-gray-300 rounded-full h-9 w-9'>
+              <div className='absolute top-3 right-4 flex items-center'>
+                <span className='bg-green-300/20 text-green-300 rounded-full h-9 w-9 flex justify-center items-center'>
                   <FaCheck />
                 </span>
               </div>
