@@ -68,7 +68,7 @@ body {
 
 .island {
   top: 10px;
-  width: 90px;
+  width: calc(100% - 20px);
   height: 25px;
   position: absolute;
   background: black;
