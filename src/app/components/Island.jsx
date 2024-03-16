@@ -39,7 +39,7 @@ export default function Island ({ loading, completed, information }) {
         return {
           width: '270px',
           height: '60px',
-          borderRadius: '50px'
+          borderRadius: '38px'
         }
 
       default:
